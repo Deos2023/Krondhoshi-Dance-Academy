@@ -575,10 +575,10 @@ const AboutPage = () => {
           >
             <h3 className="text-2xl font-bold text-pink-800 mb-4">Letter of Appreciation</h3>
             <p className="text-gray-700 mb-6 italic">
-              "On behalf of the Rabindra Parishad, Patna I would like to congratulate you and your team to provide us a wonderful evening with your dance performance 'ANURAG' based on Rabindra Sangeet in Hindi, English & Bengali on 25th May 2018."
+              &quot;On behalf of the Rabindra Parishad, Patna I would like to congratulate you and your team to provide us a wonderful evening with your dance performance &apos;ANURAG&apos; based on Rabindra Sangeet in Hindi, English & Bengali on 25th May 2018.&quot;
             </p>
             <p className="text-gray-700 mb-6">
-              "It was a spectacular and beautiful show! It was also wonderful to see the development of all your dancers and in particular your Performance. This is just one of the wonderful gifts you share as a teacher and as an artistic director. Congratulations!"
+              &quot;It was a spectacular and beautiful show! It was also wonderful to see the development of all your dancers and in particular your Performance. This is just one of the wonderful gifts you share as a teacher and as an artistic director. Congratulations!&quot;
             </p>
             <div className="text-right">
               <p className="font-bold text-pink-800">Sandip Kumar Roy</p>
@@ -652,7 +652,7 @@ const AboutPage = () => {
               style={{ fontFamily: 'var(--font-quintessential)' }}>
               Experience the Krondoshi Difference
             </h2>
-            <p className="text-xl mb-8">Join us in preserving and innovating India's rich dance heritage.</p>
+            <p className="text-xl mb-8">Join us in preserving and innovating India&apos;s rich dance heritage.</p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <motion.div
                 whileHover={{ scale: 1.05 }}

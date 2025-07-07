@@ -64,7 +64,7 @@ export const ChoreographerSection = () => {
               Rumi Chatterjee has earned recognition for her contributions to the creative and traditional dance forms of India.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              "KRONDOSHI" is committed to engaging human instinct, intellect, and emotion through innovative productions. 
+              &quot;KRONDOSHI&quot; is committed to engaging human instinct, intellect, and emotion through innovative productions. 
               By blending various classical moves, semi-classical styles, folk traditions, rituals, and gestures from daily life, 
               our technique demonstrates the excitement and creativity possible when these elements are reimagined in a contemporary context.
             </p>

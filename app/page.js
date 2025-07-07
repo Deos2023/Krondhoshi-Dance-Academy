@@ -135,7 +135,7 @@ const Home = () => {
               <p className="text-pink-200 text-sm">{testimonial.role}</p>
             </div>
           </div>
-          <p className="italic">"{testimonial.content}"</p>
+          <p className="italic">&quot;{testimonial.content}&quot;</p>
           <div className="flex mt-4">
             {[1, 2, 3, 4, 5].map((star) => (
               <svg
@@ -275,7 +275,7 @@ const Home = () => {
           fontFamily: 'var(--font-quintessential)',
         
         }}>Begin Your Dance Journey Today</h2>
-          <p className="text-xl mb-8">Whether you're 3 or 60+, it's never too early or too late to experience the joy of classical dance.</p>
+          <p className="text-xl mb-8">Whether you&apos;re 3 or 60+, it&apos;s never too early or too late to experience the joy of classical dance.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link className="px-8 py-3 bg-white text-pink-800 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg font-bold" href="/classes">
               

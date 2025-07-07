@@ -49,7 +49,7 @@ export const AchievementSection = () => {
 
             <h4 className="text-xl font-bold text-pink-700 mb-3">Letter of Appreciation</h4>
             <p className="text-gray-700 mb-4">
-              On behalf of the Rabindra Parishad, Patna I would like to congratulate you and your team for a wonderful evening with your dance performance <strong>"ANURAG"</strong> based on Rabindra Sangeet in Hindi, English & Bengali on 25th May 2018.
+              On behalf of the Rabindra Parishad, Patna I would like to congratulate you and your team for a wonderful evening with your dance performance <strong>&quot;ANURAG&quot;</strong> based on Rabindra Sangeet in Hindi, English & Bengali on 25th May 2018.
             </p>
             <p className="text-gray-700 mb-4">
               Thank you for creating such a beautiful performance. Guests from far distances were amazed by the quality and the scale of the show.

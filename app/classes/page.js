@@ -387,7 +387,7 @@ const ClassesPage = () => {
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="italic text-gray-700 mb-4">"{testimonial.content}"</p>
+              <p className="italic text-gray-700 mb-4">&quot;{testimonial.content}&quot;</p>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg key={star} className="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
@@ -413,7 +413,7 @@ const ClassesPage = () => {
               style={{ fontFamily: 'var(--font-quintessential)' }}>
               Begin Your Dance Journey Today
             </h2>
-            <p className="text-xl mb-8">Whether you're 3 or 60+, it's never too early or too late to experience the joy of classical dance.</p>
+            <p className="text-xl mb-8">Whether you&apos;re 3 or 60+, it&apos;s never too early or too late to experience the joy of classical dance.</p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <motion.div
                 whileHover={{ scale: 1.05 }}
