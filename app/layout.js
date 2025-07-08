@@ -2,6 +2,7 @@ import { Cabin_Condensed, Quintessential } from "next/font/google";
 import "./globals.css";
 import { FloatingNavbar } from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingActionButton from "./components/Floating";
 
 const cabinCondensed = Cabin_Condensed({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         }}>
           <FloatingNavbar />
         {children}
+        <FloatingActionButton />
         <Footer />
       </body>
     </html>
