@@ -30,6 +30,7 @@ export const FloatingNavbar = () => {
     { href: '/classes', name: 'Classes' },
     { href: '/gallery', name: 'Gallery' },
     { href: '/about', name: 'About' },
+    { href: '/performance', name: 'Our Performance' },
     { href: '/contact', name: 'Contact' },
   ];
 

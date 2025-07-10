@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export const HeroSection = () => {
-  const bgImages = ['/bgSweet.png'];
+  const bgImages = ['/bgSingle4.png'];
   const sliderTexts = [
     "Preserving Classical Dance Traditions",
     "Nurturing Talent Since 2011",
@@ -38,7 +38,7 @@ export const HeroSection = () => {
   }, [isMounted]);
 
   return (
-    <section className="relative h-screen overflow-hidden" style={{ pointerEvents: 'none' }}>
+    <section className="relative h-screen overflow-hidden -mt-14 sm:-mt-0" style={{ pointerEvents: 'none' }}>
       {/* Background container with pointer-events-none */}
       <div className="absolute inset-0" style={{ zIndex: 0, pointerEvents: 'none' }}>
         {isMounted && (
@@ -52,16 +52,22 @@ export const HeroSection = () => {
               className="absolute inset-0"
               style={{ pointerEvents: 'none' }}
             >
-              <Image
-                src={bgImages[currentBgIndex]}
-                alt="Dance Academy Background"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                className="opacity-90"
-                style={{ pointerEvents: 'none' }}
-                priority
-              />
+              <div className="w-full h-full relative">
+                <Image
+                  src={bgImages[currentBgIndex]}
+                  alt="Dance Academy Background"
+                  fill
+                  quality={100}
+                  className="opacity-90"
+                  style={{ 
+                    pointerEvents: 'none',
+                    objectFit: 'cover',
+                    objectPosition: 'center center'
+                  }}
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                />
+              </div>
               <div 
                 className="absolute inset-0 bg-gradient-to-t from-pink-900/30 via-pink-900/10 to-transparent"
                 style={{ pointerEvents: 'none' }}
@@ -88,7 +94,7 @@ export const HeroSection = () => {
             className="mb-8"
           >
             <h1 
-              className="text-4xl md:text-5xl font-bold text-white mb-4"
+              className="text-5xl md:text-6xl font-bold text-white mb-4"
               style={{ fontFamily: 'var(--font-quintessential)' }}
             >
               Krondoshi Dance Academy

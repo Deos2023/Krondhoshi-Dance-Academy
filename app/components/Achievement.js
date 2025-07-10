@@ -59,7 +59,7 @@ export const AchievementSection = () => {
             </p>
             <p className="text-gray-700 mb-6">I wish you continued success.</p>
 
-            <p className="text-gray-700 font-bold">Lovely Kubar</p>
+            <p className="text-gray-700 font-bold">Sandip Kumar Roy</p>
             <p className="text-gray-600">(Sandip Kumar Roy)</p>
             <p className="text-gray-600">Program Convenor & Executive Member</p>
           </div>

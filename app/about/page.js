@@ -34,16 +34,11 @@ const AboutPage = () => {
       description: "Premiere of 'Anurag', a dance drama based on Tagore's love songs, performed at Rabindra Bhaban, Patna.",
       image: "/about/first-production.jpg"
     },
+    
     {
-      year: "2015",
-      title: "International Recognition",
-      description: "Performance at ADI VIMBA Festival organized by Eastern Zonal Cultural Centre, marking international exposure.",
-      image: "/about/international.jpg"
-    },
-    {
-      year: "2018",
+      year: "2018 & 2015 ",
       title: "National Tour",
-      description: "Performances across multiple cities including Pune, Mumbai, Bangalore, and Hyderabad during Durga Puja celebrations.",
+      description: "Performances across multiple cities including Pune, Mumbai, Bangalore, and Hyderabad during Durga Puja celebrations. Performance at ADI VIMBA Festival organized by Eastern Zonal Cultural Centre, marking international exposure.",
       image: "/about/tour.jpg"
     },
     {

@@ -97,7 +97,7 @@ export const DanceOfferings = () => {
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
                 <ClassicalIcon />
               </div>
-              <h3 className="text-xl font-bold text-center text-[#A3004C] mb-4">Classical Dance Forms</h3>
+              <h3 className="text-xl font-bold text-center text-[#A3004C] mb-4">Traditional Dance Forms</h3>
               <ul className="space-y-2 text-gray-700">
                 {["Shankar Style (Specialty)", "Rabindrik & Nazrul Nritya", "Odissi & Bharatnatyam"].map((item, index) => (
                   <motion.li 
