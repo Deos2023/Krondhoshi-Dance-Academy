@@ -69,7 +69,7 @@ export const AboutSection = () => {
   return (
     <motion.section 
       ref={ref}
-      className="py-20 px-4 relative bg-white"
+      className="py-5 px-4 relative "
       initial="hidden"
       animate={controls}
       variants={containerVariants}

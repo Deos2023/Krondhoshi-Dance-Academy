@@ -8,6 +8,7 @@ import Image from 'next/image';
 export const FloatingNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -23,14 +24,21 @@ export const FloatingNavbar = () => {
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setSubMenuOpen(false);
   }, [pathname]);
 
   const navLinks = [
     { href: '/', name: 'Home' },
     { href: '/classes', name: 'Classes' },
-    { href: '/gallery', name: 'Gallery' },
+    { 
+      name: 'Pages',
+      submenu: [
+        { href: '/gallery', name: 'Gallery' },
+        { href: '/performance', name: 'Our Performance' },
+        { href: '/press-review', name: 'Press Review' }
+      ]
+    },
     { href: '/about', name: 'About' },
-    { href: '/performance', name: 'Our Performance' },
     { href: '/contact', name: 'Contact' },
   ];
 
@@ -64,17 +72,66 @@ export const FloatingNavbar = () => {
                 style={{ fontFamily: 'var(--font-quintessential)' }}
               >
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      pathname === link.href
-                        ? 'text-pink-600'
-                        : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50/50'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
+                  <div key={link.name || link.href} className="relative">
+                    {link.submenu ? (
+                      <>
+                        <button
+                          onClick={() => setSubMenuOpen(!subMenuOpen)}
+                          className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                            pathname === link.href
+                              ? 'text-pink-600'
+                              : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50/50'
+                          }`}
+                        >
+                          {link.name}
+                          <svg
+                            className={`w-4 h-4 inline ml-1 transition-transform ${
+                              subMenuOpen ? 'rotate-180' : ''
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                        {subMenuOpen && (
+                          <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            {link.submenu.map((subItem) => (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className={`block px-4 py-2 text-sm ${
+                                  pathname === subItem.href
+                                    ? 'text-pink-600 bg-pink-50'
+                                    : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
+                                }`}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                          pathname === link.href
+                            ? 'text-pink-600'
+                            : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50/50'
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
@@ -125,18 +182,64 @@ export const FloatingNavbar = () => {
           <div className="md:hidden bg-white shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    pathname === link.href
-                      ? 'text-pink-600'
-                      : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
+                <div key={link.name || link.href}>
+                  {link.submenu ? (
+                    <>
+                      <button
+                        onClick={() => setSubMenuOpen(!subMenuOpen)}
+                        className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50"
+                      >
+                        {link.name}
+                        <svg
+                          className={`w-4 h-4 ml-1 transition-transform ${
+                            subMenuOpen ? 'rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                      {subMenuOpen && (
+                        <div className="pl-4">
+                          {link.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                                pathname === subItem.href
+                                  ? 'text-pink-600'
+                                  : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
+                              }`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`block px-3 py-2 rounded-md text-base font-medium ${
+                        pathname === link.href
+                          ? 'text-pink-600'
+                          : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </div>
           </div>

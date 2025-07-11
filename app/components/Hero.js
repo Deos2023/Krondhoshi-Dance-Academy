@@ -94,7 +94,7 @@ export const HeroSection = () => {
             className="mb-8"
           >
             <h1 
-              className="text-5xl md:text-6xl font-bold text-white mb-4"
+              className="text-5xl md:text-6xl font-bold text-white -mb-20"
               style={{ fontFamily: 'var(--font-quintessential)' }}
             >
               Krondoshi Dance Academy

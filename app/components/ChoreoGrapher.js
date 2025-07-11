@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const ChoreographerSection = () => {
   return (
-    <section className="py-20 px-4 bg-pink-50">
+    <section className=" px-4 ">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

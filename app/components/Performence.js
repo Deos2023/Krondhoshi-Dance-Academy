@@ -5,25 +5,40 @@ export const PerformancesSection = () => {
     {
       year: "2018",
       events: [
-        "Kobiguru Rabindra Nath Tagore's 157th Birth Anniversary at Rabindra Bhaban",
-        "Utsab Cultural Association, Hyderabad Durga Puja",
-        "White Field Cultural Association, Bangalore"
+        "Kobiguru Rabindra Nath Tagore's 157th Birth Anniversary at Rabindra Bhaban, Patna (Organised by Rabindra Parishad)"
       ]
     },
     {
       year: "2022",
       events: [
-        "Khadki kali bari Durga Puja, Pune",
+        "Khadki Kali Bari Durga Puja, Pune",
         "Punyanagari Bangya Samaj, Pune",
+        "Pimpri Bangabharati, Pune",
         "Vashi Cultural Association, Vashi, Navi Mumbai"
       ]
     },
     {
       year: "2023",
       events: [
-        "Basanti puja Show at Khadki kalibari, Pune",
-        "Sarbojonin Durgapuja at Karandighi",
-        "Goa Banga Samiti, Goa"
+        "Basanti Puja Show at Khadki Kalibari, Pune",
+        "Sarbojonin Durgapuja at Karandighi, Uttar Dinajpur, North Bengal",
+        "Banga Maitri Sansad, Santacruz (East), Mumbai",
+        "Goa Banga Samiti, Goa",
+        "Show at Vivada Cruise organised by Bank of India",
+        "Kalipuja Show at Alipurduar (Organised by NE Railways)",
+        "Ras Utsav, Cooch Behar, North Bengal"
+      ]
+    },
+    {
+      year: "2024",
+      events: [
+        "Show at Dhanadhanya Auditorium, Kolkata (Organised by Bank of India)",
+        "Mahalaya Show at SBBLA (City Bengali Club), Jabalpur, Madhya Pradesh",
+        "Bangiya Sanskritik Parishad, Jayant, Singrauli, MP",
+        "Durgapuja Celebrations at Mhow, Army Cantonment",
+        "Bengali Cultural Association, Bhopal (TT Nagar Kalibari), MP",
+        "Bangiya Sanskritik Samiti, BHEL, Bhopal, MP",
+        "Sasan Power Ltd., Reliance, Singrauli, MP"
       ]
     }
   ];
