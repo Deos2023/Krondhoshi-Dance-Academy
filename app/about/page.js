@@ -176,7 +176,7 @@ const AboutPage = () => {
       </div>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <Link 
-          href="/productions"
+          href="/about"
           className="inline-block px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition duration-300 shadow-lg"
         >
           View Productions
