@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export const HeroSection = () => {
-  const bgImages = ['/bgSingle4.png'];
+  const bgImages = ['/bgSingle5.png'];
   const sliderTexts = [
     "Preserving Classical Dance Traditions",
     "Nurturing Talent Since 2011",
@@ -38,7 +38,7 @@ export const HeroSection = () => {
   }, [isMounted]);
 
   return (
-    <section className="relative h-screen overflow-hidden -mt-14 sm:-mt-0" style={{ pointerEvents: 'none' }}>
+    <section className="relative h-screen overflow-hidden sm:pt-10" style={{ pointerEvents: 'none' }}>
       {/* Background container with pointer-events-none */}
       <div className="absolute inset-0" style={{ zIndex: 0, pointerEvents: 'none' }}>
         {isMounted && (

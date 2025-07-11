@@ -72,7 +72,9 @@ const Home = () => {
       </Head>
 
       
-<HeroSection />
+<div className='sm:py-2 py-0'>
+  <HeroSection />
+</div>
 
       {/* About Us Section */}
    <div className="relative">
