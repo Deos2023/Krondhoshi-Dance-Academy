@@ -44,6 +44,18 @@ export const ProductionsSection = () => {
       description: "Celebration of seasons",
       duration: "60 min",
       youtubeUrl: "https://youtu.be/3NcRWuTUdgM?si=BBuiT5MtDDX6755G"
+    },
+    {
+      title: "Adhikar",
+      description: "Human Rights",
+      duration: "60 min",
+      youtubeUrl: "https://youtu.be/3NcRWuTUdgM?si=BBuiT5MtDDX6755G"
+    },
+    {
+      title: "Rupantor",
+      description: "Scottish ballads , Irish Melodies Transcreations by Rabindranath Tagore",
+      duration: "60 min",
+      youtubeUrl: "https://youtu.be/3NcRWuTUdgM?si=BBuiT5MtDDX6755G"
     }
   ];
 
@@ -103,7 +115,7 @@ export const ProductionsSection = () => {
       <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
     </motion.div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {productions.map((production, index) => {
         const youtubeId = getYouTubeId(production.youtubeUrl);
         const thumbnailUrl = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
@@ -116,7 +128,7 @@ export const ProductionsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="bg-pink-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
-            onClick={() => openVideo(production.youtubeUrl)}
+            // onClick={() => openVideo(production.youtubeUrl)}
           >
             <div className="p-6">
               <h3 className="text-2xl font-bold text-pink-700 mb-2">{production.title}</h3>

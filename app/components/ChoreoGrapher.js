@@ -29,9 +29,9 @@ export const ChoreographerSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="absolute top-0 left-0 w-3/4 h-4/5 border-4 border-white shadow-2xl z-10">
+            <div className="absolute top-0 left-0 w-3/4 h-14/15 border-4 border-white shadow-2xl z-10">
               <Image 
-                src="/img/1 (9).jpeg" // Add your image
+                src="/about.png" // Add your image
                 alt="Rumi Chatterjee"
                 layout="fill"
                 objectFit="cover"
